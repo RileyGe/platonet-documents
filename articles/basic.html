@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>&#20351;&#29992;PlatONet&#36830;&#25509;PlatON&#32593;&#32476;&#24182;&#26597;&#35810;&#22522;&#26412;&#20449;&#24687; </title>
+    <title>&#36134;&#21495;&#12289;&#22320;&#22336;&#21450;&#36716;&#36134;&#25805;&#20316; </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="&#20351;&#29992;PlatONet&#36830;&#25509;PlatON&#32593;&#32476;&#24182;&#26597;&#35810;&#22522;&#26412;&#20449;&#24687; ">
+    <meta name="title" content="&#36134;&#21495;&#12289;&#22320;&#22336;&#21450;&#36716;&#36134;&#25805;&#20316; ">
     <meta name="generator" content="docfx 2.58.9.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
@@ -67,44 +67,97 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="使用platonet连接platon网络并查询基本信息">使用PlatONet连接PlatON网络并查询基本信息</h1>
+<h1 id="账号地址及转账操作">账号、地址及转账操作</h1>
 
-<p>查询网络基本信息是最常用，也最简单的操作。本节教程只涉及查询PlatON网络的公开信息，所以不需要使用账号，只需要一个PlatON网络的接入点即可。本教程只用到了Web3类。在使用Web3之前，先介绍一下Web3类：</p>
-<p>在PlatONet中，Web3类借鉴了Ethereum网络的Web3.js，但两者功能又不完全相同。在Ethereum网络的Web3.js中，Web3是网络的统一接口，里面包含了交易（Transaction）及账号（Account）等操作。但在PlatONet中，Web3类只负责调用PlatON网络的JSON RPC服务。Transaction 及 Account 相关的操作由其他类完成。更具体的信息请参照其他相关教程。</p>
-<p>所以，在使用Web3类之前，必须指定相应网络的接入点。PlatONet支持的网络有：</p>
+<p>本篇会介绍账号的相关知识及账号生成的相关操作。本教程分为两大部分，第一部分为账号的基本概念，在这里你能学到一些相关账号的基本概念，以及一些安全方面的建议。如果你对此部分内容比较熟悉或不感兴趣，可以直接跳过第一部分，进入第二部分账号生成。在第二部分中主要讲操作，本教程会带领大家用PlatONet成账号，参与PlatON/Alaya网络交易。</p>
+<h2 id="1-基本概念">1. 基本概念</h2>
+<p>如果你是第一次接触区块链，那么PlatON/Alaya的账号（Account）的概念对你来说可能难以理解。Alaya的账号与中心化的账号有很大不同。无论你在银行还是其他中心化的应用中，如微信，支付宝等，你都要准备好资料并向中心化的组织来提交你的资料，你才能开户一个账号。但在PlatON/Alaya中，你可以自行生成一个公私钥对，如果你将你的账号地址（Address）分享给大家，大家就可以与你的账号发生交互了。</p>
+<p>这里已经出现了账号、公钥、私钥及地址等概念，不要着急，下面我们就慢慢的一一解释这些概念。我们先看下面一张图片：</p>
+<p>![Account](C:\Users\RLGE\OneDrive - whu.edu.cn\blockchain\alaya及platon\教程\账号及账号生成\account.png)</p>
+<h3 id="11-账户accounts">1.1. 账户（Accounts）</h3>
+<p>在进行正式解释之前，我们先做一下类比。PlatON/Alaya中的<strong>普通账号</strong>和银行账号有很大的相似之外。你的银行账号里面会记录你账号上有多少钱，进行过什么操作等。PlatON/Alaya中也一样，PlatON/Alaya网络会维护一棵状态树，该树以账号地址为索引，存储账号的余额（balance）、交易计数（nonce）等。</p>
+<p>PlatON/Alaya还有另外一种账号是<strong>合约账号</strong>，通常我们也直接称之为合约。合约账号和普通账号的信息都存储于同一棵树中，合约也有余额（balance）、交易计数（nonce）等，同时他还具有代码等。</p>
+<h3 id="12-地址address">1.2. 地址（Address）</h3>
+<p>如果类比一下，地址就是你银行账户的银行卡号。在PlatON/Alaya网络中，一个PlatON/Alaya地址就代表着一个账户，地址是账户的标识。也就是如我们1.1中所说，PlatON/Alaya中的状态树是以地址为索引的。</p>
+<p>与银行账号不同的是，如果别人知道了你的账号地址，那么任何人都可以通过你的地址查询到你的所有交易。</p>
+<p>不知大家发现没有，在PlatON网络中，所有地址都是以lat1开头的（在Alaya网络中以atp1开头），这是为什么呢？这是由于为了提高地址的可读性，PlatON/Alaya网络将原地址（一般使用16进制表示，如常见的0x开头的以太坊地址）经过Bech32编码，形成了现有地址。</p>
+<blockquote>
+<p>Bech32最早出现在 Bitcoin 中，其组成如下：</p>
+<p>hrp(human-readable part)：可读前缀
+seperator：分隔符，永远是“1”。
+data part：数据部分，包含小写字母和数字。但数据部分不可包含字符“1”（被用作了分隔符），“b”、“i”、“o”（可读性不强，容易与其他字符混淆）。这样数据部分每一位都有32位可能取值。
+checksum：校验部分。校验部分为地址的最后 6 位，可用于校验该字符串的正确性。</p>
+<p>下图为地址组成部分示意图：</p>
+<p>![地址组成部分](C:\Users\RLGE\OneDrive - whu.edu.cn\blockchain\alaya及platon\教程\账号及账号生成\18.png)</p>
+</blockquote>
+<h3 id="13-私钥private-key和公钥public-key">1.3. 私钥（Private Key）和公钥（Public Key）</h3>
+<p>私钥和公钥是非对称加密中的概念。在非对称加密中，我们通过某种算法来生成一个公私钥对，这个公私钥对有以下特征：</p>
 <ul>
-<li>PlatON主网</li>
-<li>PlatON开发网</li>
-<li>PlatON私有网络</li>
-<li>Alaya主网</li>
-<li>Alaya开发网</li>
-<li>Alaya私有网络</li>
+<li>知道公钥不可能（或者是非常难）推算出私钥，但知道私钥很容易推算出私钥。</li>
+<li>用公钥进行加密后的数据只有使用私钥才能对其解密。</li>
+<li>用私钥对数据进行签名后用公钥可以验证签名的正确性。</li>
 </ul>
-<p>PlatONet支持上述所有的网络。在接入网络之前，你需要一个接入点。你可以自建接入点（请参照：<a href="https://devdocs.platon.network/docs/zh-CN/Build_Private_Chain">私有网络 | PlatON</a>、<a href="https://devdocs.platon.network/docs/zh-CN/Become_PlatON_Main_Verification">成为主网节点 | PlatON</a>、<a href="https://devdocs.alaya.network/alaya-devdocs/zh-CN/Private_network">私有网络 | Alaya</a>、<a href="https://devdocs.alaya.network/alaya-devdocs/zh-CN/Run_a_fullnode">主网全节点部署 | Alaya</a>），你可以使用官方提供的公共接入点（请参照：<a href="https://devdocs.platon.network/docs/zh-CN/Join_Dev_Network">开发网络 | PlatON</a>、<a href="https://devdocs.alaya.network/alaya-devdocs/zh-CN/Join_the_dev_network">开发网络 | Alaya</a>）。本教程连接的网络为PlatON开发网，使用官方提供的公共接入点。</p>
-<p>选好网络，准备好接入点，查询工作就可以开始了。下述代码主要来自 <code>Basic.cs</code> ：</p>
-<pre><code class="lang-csharp">public static void Main(string[] args)
+<p>那么公私钥前面的账号和地址有什么关系呢？先说结论：</p>
+<ul>
+<li>私钥的持有者对账号有所有权，可以对账号进行任何PlatON/Alaya网络支持的操作。</li>
+<li>地址是由公钥经Hash操作得到的。也就是说<strong>由公钥可以容易的获得地址，但有地址却无法推算出公钥</strong>。</li>
+</ul>
+<blockquote>
+<p>安全提醒：</p>
+<ol>
+<li>由于私钥的持有者可以对账号进行任何Alaya支持的操作，所以如果你的私钥丢失，那么你将完全的失去你的账号，任何人对此都无能为力。</li>
+<li>账号进行过发送操作，其公钥就会暴露。从某种角度来讲，其安全性确实降低了。但在现有的技术水平下，公钥暴露完全造成的安全影响非常微小。到目前为止，所有区块链项目都没有因为公钥暴露而产生安全问题。</li>
+</ol>
+</blockquote>
+<h3 id="14-助记词">1.4. 助记词</h3>
+<p>助记词从名字就能看出来是干嘛的。之前说过私钥非常非常重要，但私钥又非常非常长（否则容易被破解），私钥也完全没有任何顺序，没有任何意义（否则容易被人破解）。所以为了帮助大家更好的记忆私钥，大家会有一些常用的单词，来代表私钥，这样私钥就容易记录一些了。</p>
+<p>也就是说助记词是可以和私钥相互转化，但同时又比较好记的一种私钥保存形式。私钥与助记词的转化一般是周边工具提供的功能，而不是区块链本身的功能。</p>
+<p>好，基本概念就讲这么多，下面就开始实操。</p>
+<h2 id="2-转账操作">2. 转账操作</h2>
+<p>转账操作虽然看起来简单，但实际上是一个非常完整的进行区块链交易的过程，通过转账操作，开发者基本上就可以掌握Account类、Transaction类、Web3类、PlatON类的最基本用法。Web3类和PlatON在教程《查询操作》中已经进行过基本介绍，这里就再介绍一下Account类及Transaction类：</p>
+<ul>
+<li><strong>Account</strong>：账号相关操作，最核心的功能是签名操作。而且还在此类中通过静态方法的形式提供了与助记词相关的操作。下面的示例代码中会演示如何使用私钥、助记词生成账号，也会展示如何生成随机账号。</li>
+<li><strong>Transaction</strong>：交易相关操作，核心功能是构建不同的交易。</li>
+</ul>
+<p>还是从代码开始讲解：</p>
+<pre><code class="lang-csharp">using PlatONet;
+using System;
+
+namespace examples
 {
-    var platonWeb3 = new Web3(&quot;http://47.241.98.219:6789&quot;); // dev net of platon
-    var version = platonWeb3.ClientVersion();
-    Console.WriteLine(version);
-    var netVersion = platonWeb3.NetVersion();
-    Console.WriteLine(netVersion);
-    Console.WriteLine(platonWeb3.NetListening());
-    Console.WriteLine(platonWeb3.NetPeerCount());
-    Console.WriteLine(platonWeb3.PlatonProtocolVersion());
-    Console.WriteLine(platonWeb3.PlatonSyncing());
-    Console.WriteLine(platonWeb3.PlatonGasPrice());
-    Console.WriteLine(platonWeb3.PlatonAccounts());
-    Console.WriteLine(platonWeb3.PlatonBlockNumber());
-    Console.WriteLine(platonWeb3.PlatonGetBalance(&quot;lat1awfagfqfxjcehr9kx26q9y6kg8j4wuyy9dswm5&quot;));
-    Console.WriteLine(platonWeb3.PlatonGetStorageAt(&quot;lat1awfagfqfxjcehr9kx26q9y6kg8j4wuyy9dswm5&quot;));
-    Console.WriteLine(platonWeb3.PlatonGetBlockTransactionCountByHash(&quot;0xba9436a521dd74a105457231c69dd195cd3da45aac26e50a6df45040b554327b&quot;));
-    Console.WriteLine(platonWeb3.PlatonGetTransactionCount(&quot;lat1l32ggvel6ndxxlprplz04c3vm2mq4wtgvugn36&quot;));
-    Console.WriteLine(platonWeb3.PlatonGetBlockTransactionCountByNumber());
+    public class Transfer
+    {
+        public static void Main(string[] args)
+        {
+            var mneno = Account.GenerateMnemonic(); // 9
+            var act = Account.FromMnemonic(mneno); // 10
+            var privateKey = &quot;d08baac64f52ae1b9c2ea559036650229f07f5d61d869dbb55562a9827fbaeb8&quot;;
+            var act2 = new Account(privateKey); // 12
+            var act3 = new Account(); // 13
+            var w3 = new Web3(&quot;http://35.247.155.162:6789&quot;, privateKey); // 14
+            var toAddress = &quot;lat1ljlf4myhux0zahfmlxf79wr7sl8u7pdey88dyp&quot;;
+            var amount = new HexBigInteger((ulong)1e18);
+            var gasPrice = new HexBigInteger((ulong)1e9);
+            var gasLimit = new HexBigInteger(21000);            
+            var nonceNum = w3.PlatON.GetTransactionCount();
+
+            // 构建交易
+            var tx = new Transaction(toAddress, amount, nonceNum, gasPrice, gasLimit); // 22
+            //发送交易
+            var result = w3.PlatON.SendTransaction(tx); // 24
+            Console.WriteLine(result);
+        }
+    }
 }
 </code></pre>
-<p>注意：上述代码无法在所有网站中都正常运行，这是由于不同网络的地址格式及相关Hash都不尽相同，请在使用前修改为相应网站的相关地址。</p>
-<p>本教程主要介绍了PlatONet所支持的网络及Web3的基本使用方法。本节的内容比较简单，只涉及了Web3类的使用方法，后续会介绍更复杂的使用方法。</p>
+<ul>
+<li>第9行：如何生成一个随机的助记词。</li>
+<li>第10、12、13行：如果通过助记词、私钥、随机生成账号。</li>
+<li>第14行：在构建Web3对象时，不仅传入的接入点相关信息，还传入的账号的私钥。这样就可以让Web3对象对账号进行管理，就可以在第24行发送交易时，自动对交易进行签名。如果在构建Web3对象时没有传入私钥，则也可以通过<code>w3.InitAccount</code>方法重新初始化账号，与在构建Web3对象时传入私钥是一样的效果。</li>
+<li>第22行：构建交易。</li>
+<li>第24行：发送交易。<code>w3</code>对账号进行了自动管理，所以这里不需要签名。否则需要先调用<code>tx.Sign(account)</code>方法，然后使用<code>w3.PlatON.SendRawTransaction(tx.SignedTransaction.ToHex())</code>发送交易。</li>
+</ul>
+<p>转账交易是区块链中最基础、使用最广泛的操作，以上就是使用PlatONet进行转账的操作方法。</p>
 </article>
           </div>
           

@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title> </title>
+    <title>&#26234;&#33021;&#21512;&#32422;&#25805;&#20316; </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content=" ">
+    <meta name="title" content="&#26234;&#33021;&#21512;&#32422;&#25805;&#20316; ">
     <meta name="generator" content="docfx 2.58.9.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
@@ -67,7 +67,139 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
+<h1 id="智能合约操作">智能合约操作</h1>
 
+<p>智能合约是PlatON/Alaya最核心的功能之一，能过智能合约，用户可以无限制的拓展区块链的应用。ERC20代币、NFT、去中心交易所、DAO等都是智能合约的应用。本文就介绍一下如何通过PlatONet进行智能合约的部署与交互。</p>
+<blockquote>
+<p>注：本文不会涉及到如何进行智能合约的编写及编译等相关介绍，如需要相关知识，请参照：<a href="https://devdocs.platon.network/docs/zh-CN/Solidity_Dev_Manual">Solidity智能合约开发</a>。</p>
+</blockquote>
+<h2 id="1-智能合约部署">1. 智能合约部署</h2>
+<p>文本使用<a href="https://devdocs.platon.network/docs/zh-CN/Solidity_Dev_Manual">Solidity智能合约入门手册</a>中<a href="https://devdocs.platon.network/docs/zh-CN/Solidity_Dev_Manual#%E5%88%9B%E5%BB%BAhelloworld%E5%90%88%E7%BA%A6">创建HelloWorld合约</a>章节中的智能合约为例，智能合约代码如下：</p>
+<pre><code class="lang-javascript">pragma solidity ^0.5.17;
+
+contract HelloWorld {
+    
+    string name;
+    
+    function setName(string memory _name) public returns(string memory){
+        name = _name;
+        return name;
+    }
+    
+    function getName() public view returns(string memory){
+        return name;
+    }
+}
+</code></pre>
+<p>智能合约编译后会产生一串二进制代码（一般使用16进制进行表示、编译方法参照<a href="https://devdocs.platon.network/docs/zh-CN/Solidity_Dev_Manual#%E7%BC%96%E8%AF%91helloworld%E5%90%88%E7%BA%A6">编译HelloWorld合约</a>），编译结果为：</p>
+<pre><code class="lang-csharp">var bytecode = &quot;0x608060405234801561001057600080fd5b50610429806100206000396000f3fe608060405234801561001057600080fd5b50600436106100365760003560e01c806317d7de7c1461003b578063c47f0027146100be575b600080fd5b6100436101f2565b6040518080602001828103825283818151815260200191508051906020019080838360005b83811015610083578082015181840152602081019050610068565b50505050905090810190601f1680156100b05780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b610177600480360360208110156100d457600080fd5b81019080803590602001906401000000008111156100f157600080fd5b82018360208201111561010357600080fd5b8035906020019184600183028401116401000000008311171561012557600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600081840152601f19601f820116905080830192505050505050509192919290505050610294565b6040518080602001828103825283818151815260200191508051906020019080838360005b838110156101b757808201518184015260208101905061019c565b50505050905090810190601f1680156101e45780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b606060008054600181600116156101000203166002900480601f01602080910402602001604051908101604052809291908181526020018280546001816001161561010002031660029004801561028a5780601f1061025f5761010080835404028352916020019161028a565b820191906000526020600020905b81548152906001019060200180831161026d57829003601f168201915b5050505050905090565b606081600090805190602001906102ac92919061034f565b5060008054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156103435780601f1061031857610100808354040283529160200191610343565b820191906000526020600020905b81548152906001019060200180831161032657829003601f168201915b50505050509050919050565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f1061039057805160ff19168380011785556103be565b828001600101855582156103be579182015b828111156103bd5782518255916020019190600101906103a2565b5b5090506103cb91906103cf565b5090565b6103f191905b808211156103ed5760008160009055506001016103d5565b5090565b9056fea265627a7a72315820a89a95b35ad9e15c39082d4e9ece93b95b29072f95af709314ba017e1fb1487764736f6c63430005110032&quot;;
+var abi = @&quot;[
+        {
+          &quot;&quot;constant&quot;&quot;: false,
+          &quot;&quot;inputs&quot;&quot;: [
+            {
+              &quot;&quot;internalType&quot;&quot;: &quot;&quot;string&quot;&quot;,
+              &quot;&quot;name&quot;&quot;: &quot;&quot;_name&quot;&quot;,
+              &quot;&quot;type&quot;&quot;: &quot;&quot;string&quot;&quot;
+            }
+          ],
+          &quot;&quot;name&quot;&quot;: &quot;&quot;setName&quot;&quot;,
+          &quot;&quot;outputs&quot;&quot;: [
+            {
+              &quot;&quot;internalType&quot;&quot;: &quot;&quot;string&quot;&quot;,
+              &quot;&quot;name&quot;&quot;: &quot;&quot;&quot;&quot;,
+              &quot;&quot;type&quot;&quot;: &quot;&quot;string&quot;&quot;
+            }
+          ],
+          &quot;&quot;payable&quot;&quot;: false,
+          &quot;&quot;stateMutability&quot;&quot;: &quot;&quot;nonpayable&quot;&quot;,
+          &quot;&quot;type&quot;&quot;: &quot;&quot;function&quot;&quot;
+        },
+        {
+          &quot;&quot;constant&quot;&quot;: true,
+          &quot;&quot;inputs&quot;&quot;: [],
+          &quot;&quot;name&quot;&quot;: &quot;&quot;getName&quot;&quot;,
+          &quot;&quot;outputs&quot;&quot;: [
+            {
+              &quot;&quot;internalType&quot;&quot;: &quot;&quot;string&quot;&quot;,
+              &quot;&quot;name&quot;&quot;: &quot;&quot;&quot;&quot;,
+              &quot;&quot;type&quot;&quot;: &quot;&quot;string&quot;&quot;
+            }
+          ],
+          &quot;&quot;payable&quot;&quot;: false,
+          &quot;&quot;stateMutability&quot;&quot;: &quot;&quot;view&quot;&quot;,
+          &quot;&quot;type&quot;&quot;: &quot;&quot;function&quot;&quot;
+        }
+      ]&quot;;
+</code></pre>
+<p>其中变量bytecode为智能合约编译结果，变量abi为此智能合约的abi。为了表示方便，后面部分的代码可能会直接省略bytecode和abi两个变量的定义，而直接使用上面两个变量。</p>
+<p>智能合约部署非常简单，代码如下：</p>
+<pre><code class="lang-csharp">
+namespace examples
+{
+    public class ContractDeploy
+    {
+        public static void Main(string[] args)
+        {
+            var bytecode = &quot;0x608060405234801561001057600080fd5b50610429806100206000396000f3fe608060405234801561001057600080fd5b50600436106100365760003560e01c806317d7de7c1461003b578063c47f0027146100be575b600080fd5b6100436101f2565b6040518080602001828103825283818151815260200191508051906020019080838360005b83811015610083578082015181840152602081019050610068565b50505050905090810190601f1680156100b05780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b610177600480360360208110156100d457600080fd5b81019080803590602001906401000000008111156100f157600080fd5b82018360208201111561010357600080fd5b8035906020019184600183028401116401000000008311171561012557600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600081840152601f19601f820116905080830192505050505050509192919290505050610294565b6040518080602001828103825283818151815260200191508051906020019080838360005b838110156101b757808201518184015260208101905061019c565b50505050905090810190601f1680156101e45780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b606060008054600181600116156101000203166002900480601f01602080910402602001604051908101604052809291908181526020018280546001816001161561010002031660029004801561028a5780601f1061025f5761010080835404028352916020019161028a565b820191906000526020600020905b81548152906001019060200180831161026d57829003601f168201915b5050505050905090565b606081600090805190602001906102ac92919061034f565b5060008054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156103435780601f1061031857610100808354040283529160200191610343565b820191906000526020600020905b81548152906001019060200180831161032657829003601f168201915b50505050509050919050565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f1061039057805160ff19168380011785556103be565b828001600101855582156103be579182015b828111156103bd5782518255916020019190600101906103a2565b5b5090506103cb91906103cf565b5090565b6103f191905b808211156103ed5760008160009055506001016103d5565b5090565b9056fea265627a7a72315820a89a95b35ad9e15c39082d4e9ece93b95b29072f95af709314ba017e1fb1487764736f6c63430005110032&quot;;
+            var privateKey = &quot;d08baac64f52ae1b9c2ea559036650229f07f5d61d869dbb55562a9827fbaeb8&quot;;
+            var w3 = new Web3(&quot;http://35.247.155.162:6789&quot;, privateKey); // dev net of platon
+            var tx = new Transaction()
+            {
+                GasPrice = 1000000000L.ToHexBigInteger(),  // 12
+                Data = bytecode
+            };
+            tx = w3.PlatON.FillTransactionWithDefaultValue(tx); // 15
+            var result = w3.PlatON.SendTransaction(tx);
+            Console.WriteLine(result);
+        }
+    }
+}
+</code></pre>
+<ul>
+<li>第12行：虽然下面第15行的代码也可以对<code>GasPrice</code>进行估计，但有时网络默认的<code>GasPrice</code>会比较高。这里最好使用比较可信的估计方法。</li>
+<li>第15行：<code>FillTransactionWithDefaultValue</code>是一个可以自动填充Nonce、GasPrice、GasLimit三个参数的快捷方法，在部分场景下非常有用。</li>
+</ul>
+<p>智能合约的部署是不是非常简单！</p>
+<h2 id="2-与智能合约进行交互">2. 与智能合约进行交互</h2>
+<p>与智能合约的交互我们也从代码开始讲解：</p>
+<pre><code class="lang-csharp">using PlatONet;
+using System;
+
+namespace examples
+{
+    public class Contract3
+    {
+        public static void Main(string[] args)
+        {
+            var privateKey = &quot;d08baac64f52ae1b9c2ea559036650229f07f5d61d869dbb55562a9827fbaeb8&quot;;
+            var w3 = new Web3(&quot;http://35.247.155.162:6789&quot;, privateKey);
+            var abi = @&quot;[...请输入ABI...]&quot;;
+            var contractAddress = &quot;lat1ts7u6ekl9zfmqw399wvnfh2gxc5gkjv34ymkvt&quot;; // 13
+            var contract = w3.PlatON.GetContract(abi, contractAddress); // 14
+            var result = contract.GetFunction(&quot;getName&quot;).Call&lt;string&gt;(); // 15
+            Console.WriteLine(result); // 16
+            var nameResult = contract.GetFunction(&quot;setName&quot;).SendTransaction(&quot;abcabc&quot;); // 17
+            Console.WriteLine(nameResult);
+        }
+    }
+}
+</code></pre>
+<ul>
+<li><p>与智能合约交互主要有两种方式：</p>
+<ol>
+<li>以15行为代表的查询方式：此方式并不会改变区块链的状态，所以不需要账号信息就可以进行。</li>
+<li>以17行为代表的写交易：此方式会改变区块链的状态，是需要经过账号签名、矿工打包后才能生效的。</li>
+</ol>
+</li>
+<li><p>第14行：使用<code>abi</code>和<code>contractAddress</code>两个变量生成一个PlatONContract对象的实例。</p>
+</li>
+<li><p>第15行：查询交易的一般使用方法。本例中没有使用参数，传参数的方法和第17行的传参方法相同。参数的数量和类型需要与abi中定义的相同。</p>
+</li>
+<li><p>第17行：写交易的一般使用方法。注：由于写交易需要经过账号签名，所以需要初始化账号信息后才能使用。否则必须手动签名，手动构建<code>Transaction</code>后，使用<code>SendRawTransaction</code>进行发送。</p>
+</li>
+</ul>
+<p>了解了这些，开发者就可以非常流畅的与智能合约进行交互了！</p>
 </article>
           </div>
           

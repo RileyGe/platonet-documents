@@ -1,0 +1,142 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>&#31995;&#32479;&#21512;&#32422;&#20132;&#20114; </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="&#31995;&#32479;&#21512;&#32422;&#20132;&#20114; ">
+    <meta name="generator" content="docfx 2.58.9.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="系统合约交互">系统合约交互</h1>
+
+<p>在链启动之后系统内部已经内置了部分合约，这些合约的地址已固定，功能已实现，其中一部分合约为经济模型的实现，并提供各类合约接口与客户端进行交互。更多详细内容请参照：<a href="https://devdocs.platon.network/docs/zh-CN/PlatON_system_contract">系统合约</a>。</p>
+<p>从原理上来讲，系统合约与普通合约的交互方式相同，用户可以自行构造abi来使用与普通智能合约交互的方式来与系统合约进行交互。但PlatONet已经将系统合约进行了封装，使用户可以更便捷使用系统合约。封装后开发者可以像使用普通函数一样与系统合约交互。</p>
+<pre><code class="lang-csharp">using PlatONet;
+using PlatONet.DTOs;
+using System;
+
+namespace examples
+{
+    public class PPOS
+    {
+        public static void Main(string[] args)
+        {
+            var privateKey = &quot;d08baac64f52ae1b9c2ea559036650229f07f5d61d869dbb55562a9827fbaeb8&quot;;
+            var w3 = new Web3(&quot;http://35.247.155.162:6789&quot;, privateKey);
+            var ppos = w3.PlatON.PPOS; // 13
+            var nodeId = &quot;0x177226cb3440cec3b8e7b7d591fde985665a3fc1e069a7f9db86080350cb91e8ecb1cad35ed786ee22256229182f79909dcf7431b58e58c9a706935b6046ffb2&quot;;
+            var result = ppos.GetStakingInfo(nodeId); // 15
+            Console.WriteLine(result);
+
+            string hash = ppos.Delegate(nodeId, StakingAmountType.FREE_AMOUNT_TYPE,
+                ((ulong)1e19).ToHexBigInteger()); // 19
+            Console.WriteLine(hash);
+        }
+    }
+}
+</code></pre>
+<ul>
+<li>第13行：<code>ppos</code>变量是为了方便书写而定义的，如果后面全部使用<code>w3.PlatON.PPOS</code>替代<code>ppos</code>效果是相同的。</li>
+<li>第15行：查询系统合约状态。由此可以看出，PlatONet已经将系统合约封装成普通函数，就像调用普通函数一样调用即可。</li>
+<li>第18~19行：写系统合约调用。由于此操作涉及区块链的写操作，会改变区块链状态，需要在使用前初始化账号，否则会调用失败。</li>
+</ul>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/RileyGe/PlatONet/blob/main/docs/articles/ppos.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

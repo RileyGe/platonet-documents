@@ -115,10 +115,26 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/RileyGe/PlatONet/new/main/apiSpec/new?filename=PlatONet_Account__ctor.md&amp;value=---%0Auid%3A%20PlatONet.Account.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/RileyGe/PlatONet/blob/main/PlatONet/Account.cs/#L31">View Source</a>
+  </span>
+  <a id="PlatONet_Account__ctor_" data-uid="PlatONet.Account.#ctor*"></a>
+  <h4 id="PlatONet_Account__ctor" data-uid="PlatONet.Account.#ctor">Account()</h4>
+  <div class="markdown level1 summary"><p>产生一个随机的账号</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Account()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/RileyGe/PlatONet/new/main/apiSpec/new?filename=PlatONet_Account__ctor_System_String_.md&amp;value=---%0Auid%3A%20PlatONet.Account.%23ctor(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/RileyGe/PlatONet/blob/main/PlatONet/Account.cs/#L18">View Source</a>
+    <a href="https://github.com/RileyGe/PlatONet/blob/main/PlatONet/Account.cs/#L24">View Source</a>
   </span>
   <a id="PlatONet_Account__ctor_" data-uid="PlatONet.Account.#ctor*"></a>
   <h4 id="PlatONet_Account__ctor_System_String_" data-uid="PlatONet.Account.#ctor(System.String)">Account(String)</h4>
@@ -154,7 +170,7 @@
     <a href="https://github.com/RileyGe/PlatONet/new/main/apiSpec/new?filename=PlatONet_Account_PublicKey.md&amp;value=---%0Auid%3A%20PlatONet.Account.PublicKey%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/RileyGe/PlatONet/blob/main/PlatONet/Account.cs/#L25">View Source</a>
+    <a href="https://github.com/RileyGe/PlatONet/blob/main/PlatONet/Account.cs/#L67">View Source</a>
   </span>
   <a id="PlatONet_Account_PublicKey_" data-uid="PlatONet.Account.PublicKey*"></a>
   <h4 id="PlatONet_Account_PublicKey" data-uid="PlatONet.Account.PublicKey">PublicKey</h4>
@@ -184,10 +200,98 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/RileyGe/PlatONet/new/main/apiSpec/new?filename=PlatONet_Account_FromMnemonic_System_String_System_Int32_.md&amp;value=---%0Auid%3A%20PlatONet.Account.FromMnemonic(System.String%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/RileyGe/PlatONet/blob/main/PlatONet/Account.cs/#L41">View Source</a>
+  </span>
+  <a id="PlatONet_Account_FromMnemonic_" data-uid="PlatONet.Account.FromMnemonic*"></a>
+  <h4 id="PlatONet_Account_FromMnemonic_System_String_System_Int32_" data-uid="PlatONet.Account.FromMnemonic(System.String,System.Int32)">FromMnemonic(String, Int32)</h4>
+  <div class="markdown level1 summary"><p>使用助记词生成一个账号</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Account FromMnemonic(string mnenonic, int index = 0)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">mnenonic</span></td>
+        <td><p>助记词</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">index</span></td>
+        <td><p>索引，从0开始</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="PlatONet.Account.html">Account</a></td>
+        <td><p>账号</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/RileyGe/PlatONet/new/main/apiSpec/new?filename=PlatONet_Account_GenerateMnemonic.md&amp;value=---%0Auid%3A%20PlatONet.Account.GenerateMnemonic%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/RileyGe/PlatONet/blob/main/PlatONet/Account.cs/#L51">View Source</a>
+  </span>
+  <a id="PlatONet_Account_GenerateMnemonic_" data-uid="PlatONet.Account.GenerateMnemonic*"></a>
+  <h4 id="PlatONet_Account_GenerateMnemonic" data-uid="PlatONet.Account.GenerateMnemonic">GenerateMnemonic()</h4>
+  <div class="markdown level1 summary"><p>生成一个随机的助记词</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string GenerateMnemonic()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><p>助记词</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/RileyGe/PlatONet/new/main/apiSpec/new?filename=PlatONet_Account_GetAddress_System_String_.md&amp;value=---%0Auid%3A%20PlatONet.Account.GetAddress(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/RileyGe/PlatONet/blob/main/PlatONet/Account.cs/#L37">View Source</a>
+    <a href="https://github.com/RileyGe/PlatONet/blob/main/PlatONet/Account.cs/#L79">View Source</a>
   </span>
   <a id="PlatONet_Account_GetAddress_" data-uid="PlatONet.Account.GetAddress*"></a>
   <h4 id="PlatONet_Account_GetAddress_System_String_" data-uid="PlatONet.Account.GetAddress(System.String)">GetAddress(String)</h4>
@@ -237,7 +341,7 @@
     <a href="https://github.com/RileyGe/PlatONet/new/main/apiSpec/new?filename=PlatONet_Account_Sign_PlatONet_Transaction_.md&amp;value=---%0Auid%3A%20PlatONet.Account.Sign(PlatONet.Transaction)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/RileyGe/PlatONet/blob/main/PlatONet/Account.cs/#L70">View Source</a>
+    <a href="https://github.com/RileyGe/PlatONet/blob/main/PlatONet/Account.cs/#L112">View Source</a>
   </span>
   <a id="PlatONet_Account_Sign_" data-uid="PlatONet.Account.Sign*"></a>
   <h4 id="PlatONet_Account_Sign_PlatONet_Transaction_" data-uid="PlatONet.Account.Sign(PlatONet.Transaction)">Sign(Transaction)</h4>
@@ -287,7 +391,7 @@
     <a href="https://github.com/RileyGe/PlatONet/new/main/apiSpec/new?filename=PlatONet_Account_Sign_System_Byte___.md&amp;value=---%0Auid%3A%20PlatONet.Account.Sign(System.Byte%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/RileyGe/PlatONet/blob/main/PlatONet/Account.cs/#L61">View Source</a>
+    <a href="https://github.com/RileyGe/PlatONet/blob/main/PlatONet/Account.cs/#L103">View Source</a>
   </span>
   <a id="PlatONet_Account_Sign_" data-uid="PlatONet.Account.Sign*"></a>
   <h4 id="PlatONet_Account_Sign_System_Byte___" data-uid="PlatONet.Account.Sign(System.Byte[])">Sign(Byte[])</h4>
@@ -337,7 +441,7 @@
     <a href="https://github.com/RileyGe/PlatONet/new/main/apiSpec/new?filename=PlatONet_Account_Sign_System_String_.md&amp;value=---%0Auid%3A%20PlatONet.Account.Sign(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/RileyGe/PlatONet/blob/main/PlatONet/Account.cs/#L52">View Source</a>
+    <a href="https://github.com/RileyGe/PlatONet/blob/main/PlatONet/Account.cs/#L94">View Source</a>
   </span>
   <a id="PlatONet_Account_Sign_" data-uid="PlatONet.Account.Sign*"></a>
   <h4 id="PlatONet_Account_Sign_System_String_" data-uid="PlatONet.Account.Sign(System.String)">Sign(String)</h4>
@@ -393,7 +497,7 @@
                     <a href="https://github.com/RileyGe/PlatONet/new/main/apiSpec/new?filename=PlatONet_Account.md&amp;value=---%0Auid%3A%20PlatONet.Account%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/RileyGe/PlatONet/blob/main/PlatONet/Account.cs/#L11" class="contribution-link">View Source</a>
+                    <a href="https://github.com/RileyGe/PlatONet/blob/main/PlatONet/Account.cs/#L17" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

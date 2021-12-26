@@ -9,10 +9,10 @@
       "output": {
         ".html": {
           "relative_path": "api/PlatONet.Account.html",
-          "hash": "ZdQPmfCTiv9GaN5xptA4s+tVsjEI6oBqaR5Hb0UDVKA="
+          "hash": "QPcjMjfhcq4StKgN3tgfop8ypam7XolmfGjo3X+5/vQ="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -21,46 +21,10 @@
       "output": {
         ".html": {
           "relative_path": "api/PlatONet.Address.html",
-          "hash": "8CqnL/AMg672s9HYP1aQolW1DttXrykPSczQ+8mzS4Y="
+          "hash": "iQtepMcejAWm7KHVK57l0QUlybD3OW5vIDSFYyYI7hM="
         }
       },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/PlatONet.ApiMplatonods.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/PlatONet.ApiMplatonods.html",
-          "hash": "yMFTqoIf/0xhgVvYxhZ7ktv8fk2GSpp9VGmI6XRWC8I="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/PlatONet.BaseResponse.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/PlatONet.BaseResponse.html",
-          "hash": "W1qxnJbjKbq7zOoemllYb3ZU6L+nY8KjhASRIFpfptI="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/PlatONet.Bech32Engine.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/PlatONet.Bech32Engine.html",
-          "hash": "yKEnnEZJhX/xywSR/M2mS4Y9gxEdnk+8wjx/gJ7xKv0="
-        }
-      },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -69,7 +33,19 @@
       "output": {
         ".html": {
           "relative_path": "api/PlatONet.BlockParameter.html",
-          "hash": "NHEjHBWkcK93Nuu2PXGvMJtZEPkYlVR/Rz8U6lwdPGU="
+          "hash": "eWu+kzk6z17WM1IWyBxFSCv4nNXeRsyOjaeMx83H3g0="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PlatONet.DTOs.BaseResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PlatONet.DTOs.BaseResponse.html",
+          "hash": "nc1Swg7zRjicy1iapObqkKXPSMuHSnuZrTp7YxBa6X0="
         }
       },
       "is_incremental": false,
@@ -77,11 +53,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/PlatONet.CallResponse-1.yml",
+      "source_relative_path": "api/PlatONet.DTOs.CallResponse-1.yml",
       "output": {
         ".html": {
-          "relative_path": "api/PlatONet.CallResponse-1.html",
-          "hash": "ZwZbrja6/LpGL7cJUvvVXgoohLNIJUu25Tjvbudmusg="
+          "relative_path": "api/PlatONet.DTOs.CallResponse-1.html",
+          "hash": "DHKPx6OVwWaigIICglSQWGMsBY0NbpMtik1sqf/EagY="
         }
       },
       "is_incremental": false,
@@ -89,11 +65,23 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/PlatONet.CryptoUtils.yml",
+      "source_relative_path": "api/PlatONet.DTOs.Common.yml",
       "output": {
         ".html": {
-          "relative_path": "api/PlatONet.CryptoUtils.html",
-          "hash": "k2tM1bLZ3HKSdthouPaoNGbvigNvBYXC1MEWZ/WOeHg="
+          "relative_path": "api/PlatONet.DTOs.Common.html",
+          "hash": "UFmMdQFTIn2+cDEI4yAG5xXluHZrr3o2V5ykoAM5LQo="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PlatONet.DTOs.Delegation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PlatONet.DTOs.Delegation.html",
+          "hash": "taFhb3uAJdas9m6Wl2/ny49scn8035sKpnMzAdfrUzk="
         }
       },
       "is_incremental": false,
@@ -101,11 +89,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/PlatONet.Delegation.yml",
+      "source_relative_path": "api/PlatONet.DTOs.DelegationIdInfo.yml",
       "output": {
         ".html": {
-          "relative_path": "api/PlatONet.Delegation.html",
-          "hash": "m6Y/oyTddOcU8K7nf0BGUolar/fXiuzzkiQ5pRsaz8Y="
+          "relative_path": "api/PlatONet.DTOs.DelegationIdInfo.html",
+          "hash": "qZJ9jnmYEW7VoJ2aXo8EpjM9jFJLVkkEG74+r/Eu/V8="
         }
       },
       "is_incremental": false,
@@ -113,11 +101,71 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/PlatONet.DelegationIdInfo.yml",
+      "source_relative_path": "api/PlatONet.DTOs.DuplicateSignType.yml",
       "output": {
         ".html": {
-          "relative_path": "api/PlatONet.DelegationIdInfo.html",
-          "hash": "lVgkCtuVSKsOMDf2qTRiQvSRdyYfTnwBfWoX9jDnjcY="
+          "relative_path": "api/PlatONet.DTOs.DuplicateSignType.html",
+          "hash": "y+FtJu2MGffO3Uc3EfesMOHZEceHKIftU7aOVRCzuy4="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PlatONet.DTOs.EconomicConfig.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PlatONet.DTOs.EconomicConfig.html",
+          "hash": "v/tLbrHc87QaSkqO3Zx0t2CNMjSvOZaT2tFm88QAdLE="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PlatONet.DTOs.ErrorCode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PlatONet.DTOs.ErrorCode.html",
+          "hash": "TT3B/G5dFaq/UGwfARXEDEUqU7VfhcN/8MPOE/4h9T4="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PlatONet.DTOs.Gov.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PlatONet.DTOs.Gov.html",
+          "hash": "E8X9TeJFudPuaDmOpc6gg8NYtyWupEKZCnrU+JTDB7A="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PlatONet.DTOs.InnerAcc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PlatONet.DTOs.InnerAcc.html",
+          "hash": "8xeZOQq9JtnUUGzueFpdmlunxfEyTDkNzx/WydT6VQo="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PlatONet.DTOs.Node.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PlatONet.DTOs.Node.html",
+          "hash": "KbnqOrmF2xpx3VUwzkbb5ds2xCpoMHa4PV56ybHuh+Y="
         }
       },
       "is_incremental": false,
@@ -125,11 +173,23 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/PlatONet.DuplicateSignType.yml",
+      "source_relative_path": "api/PlatONet.DTOs.PPOSProposalType.yml",
       "output": {
         ".html": {
-          "relative_path": "api/PlatONet.DuplicateSignType.html",
-          "hash": "t18z7OUcBpop9LQKD7duo6VXAIbGz/QJAjReVVSDPJg="
+          "relative_path": "api/PlatONet.DTOs.PPOSProposalType.html",
+          "hash": "UfSylFxFQnN9IlrAdEGR0SiMVRpKAC0S/vf//p91eXk="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PlatONet.DTOs.PlatONException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PlatONet.DTOs.PlatONException.html",
+          "hash": "9eYd2sAhKIjOy3ar3DKyoNwbvdcpuLFOyqpQWUJvHt8="
         }
       },
       "is_incremental": false,
@@ -137,11 +197,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/PlatONet.EconomicConfig.Common.yml",
+      "source_relative_path": "api/PlatONet.DTOs.ProgramVersion.yml",
       "output": {
         ".html": {
-          "relative_path": "api/PlatONet.EconomicConfig.Common.html",
-          "hash": "bXFEZGV8fFh0AfjO3r3cnB2eoYUJZKbfKwBtA1Gp5kE="
+          "relative_path": "api/PlatONet.DTOs.ProgramVersion.html",
+          "hash": "895LOsjFHfezgtz0EtKfDmIvTQKefUwBobgcwAlYvjg="
         }
       },
       "is_incremental": false,
@@ -149,11 +209,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/PlatONet.EconomicConfig.Gov.yml",
+      "source_relative_path": "api/PlatONet.DTOs.Proposal.Builder.yml",
       "output": {
         ".html": {
-          "relative_path": "api/PlatONet.EconomicConfig.Gov.html",
-          "hash": "x4DkdIqPpDmpxP9885TV+PfJVvCYbOf1tEZxLF+11YE="
+          "relative_path": "api/PlatONet.DTOs.Proposal.Builder.html",
+          "hash": "aVIbABFgAM3Stn7QECM1MEKlLLq6uo6PFjwWicnCyUM="
         }
       },
       "is_incremental": false,
@@ -161,11 +221,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/PlatONet.EconomicConfig.InnerAcc.yml",
+      "source_relative_path": "api/PlatONet.DTOs.Proposal.yml",
       "output": {
         ".html": {
-          "relative_path": "api/PlatONet.EconomicConfig.InnerAcc.html",
-          "hash": "bf4r4a8iZjlCJOZAzIFsx78JsQpn8Lq7kKVWzA2H+Gw="
+          "relative_path": "api/PlatONet.DTOs.Proposal.html",
+          "hash": "jUpozGXbiE1w6Y+x0C5jOKOLO2jvPD8szAakNH0bc0s="
         }
       },
       "is_incremental": false,
@@ -173,11 +233,23 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/PlatONet.EconomicConfig.Restricting.yml",
+      "source_relative_path": "api/PlatONet.DTOs.Restricting.yml",
       "output": {
         ".html": {
-          "relative_path": "api/PlatONet.EconomicConfig.Restricting.html",
-          "hash": "AHcUCwGBXI1ZTNeCTLIQnmxtlUtFTGm/ahePAq1T+kI="
+          "relative_path": "api/PlatONet.DTOs.Restricting.html",
+          "hash": "C/n4NNUpaizkYETm+UQ8BewDacKVUJXaL03HAACExo4="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PlatONet.DTOs.RestrictingInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PlatONet.DTOs.RestrictingInfo.html",
+          "hash": "FdNE4ccD5ATyyeyWdGI+OgvGfYrVb/vnK1sG2PsVJl0="
         }
       },
       "is_incremental": false,
@@ -185,11 +257,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/PlatONet.EconomicConfig.Reward.yml",
+      "source_relative_path": "api/PlatONet.DTOs.RestrictingItem.yml",
       "output": {
         ".html": {
-          "relative_path": "api/PlatONet.EconomicConfig.Reward.html",
-          "hash": "+LVZtFTgnkj0kg8BV091adbN4/DAANC7B+u2oxw5vDo="
+          "relative_path": "api/PlatONet.DTOs.RestrictingItem.html",
+          "hash": "TnVS2RZPibiQVRqzu+9ykwK/zNIhwtcK1PI3IUqnSuU="
         }
       },
       "is_incremental": false,
@@ -197,11 +269,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/PlatONet.EconomicConfig.Slashing.yml",
+      "source_relative_path": "api/PlatONet.DTOs.RestrictingPlan.yml",
       "output": {
         ".html": {
-          "relative_path": "api/PlatONet.EconomicConfig.Slashing.html",
-          "hash": "lECEhgZarxyfvR3ZcRgFHDHqzPCJ8Eo7HNSAXvfI1WQ="
+          "relative_path": "api/PlatONet.DTOs.RestrictingPlan.html",
+          "hash": "EaY5rtko4X7SA2b3QzK9Kde2HQ8jOIwvAekGGUl4n6A="
         }
       },
       "is_incremental": false,
@@ -209,11 +281,23 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/PlatONet.EconomicConfig.Staking.yml",
+      "source_relative_path": "api/PlatONet.DTOs.Reward.yml",
       "output": {
         ".html": {
-          "relative_path": "api/PlatONet.EconomicConfig.Staking.html",
-          "hash": "i73fYapkoiz2P/LTIZTUUeSsQ+xChazhNW/WZUWYLY0="
+          "relative_path": "api/PlatONet.DTOs.Reward.html",
+          "hash": "hq29LQzF1T5uGt8fL/hq0FSRnORXvZHoN2T6zXgmctE="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PlatONet.DTOs.RewardInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PlatONet.DTOs.RewardInfo.html",
+          "hash": "R5U7dqryT5cDnXxUlpQJN7kofUE33/z3k1/T6A+z8+k="
         }
       },
       "is_incremental": false,
@@ -221,11 +305,47 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/PlatONet.EconomicConfig.yml",
+      "source_relative_path": "api/PlatONet.DTOs.Slashing.yml",
       "output": {
         ".html": {
-          "relative_path": "api/PlatONet.EconomicConfig.html",
-          "hash": "p0c7EVhheR0TXsLLKiM1b4ZFTc4TyuTlh0GWhe4amOc="
+          "relative_path": "api/PlatONet.DTOs.Slashing.html",
+          "hash": "IRfllK2h84XEtsCed/lrVQ0IyeuwuJPgcQpBOdU202o="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PlatONet.DTOs.Staking.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PlatONet.DTOs.Staking.html",
+          "hash": "cXOBZ88AxbNK85Sd8mZzn7t+4PURUfTtKYceJTXr5KM="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PlatONet.DTOs.StakingAmountType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PlatONet.DTOs.StakingAmountType.html",
+          "hash": "6u0oEqLmT3ZGoIRRtUcsTtFsRNRNac7Jd9kD0BMx6gE="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PlatONet.DTOs.TallyResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PlatONet.DTOs.TallyResult.html",
+          "hash": "Y7rSn2ygLsOXGPgHaqn0/R/MP2Af8apIBzcbMv4Ylcg="
         }
       },
       "is_incremental": false,
@@ -233,11 +353,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/PlatONet.ErrorCode.yml",
+      "source_relative_path": "api/PlatONet.DTOs.TransactionReceipt.yml",
       "output": {
         ".html": {
-          "relative_path": "api/PlatONet.ErrorCode.html",
-          "hash": "7FaXw+cMPOO+HI3VOhdIBjcnOToMRxs5bxTtnBhZMTw="
+          "relative_path": "api/PlatONet.DTOs.TransactionReceipt.html",
+          "hash": "uBxGbe2VAK5uIpp2aPsK/8o8JcAJcZwqbw+R+dJMzuI="
         }
       },
       "is_incremental": false,
@@ -245,14 +365,74 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/PlatONet.Node.yml",
+      "source_relative_path": "api/PlatONet.DTOs.TransactionResponse.yml",
       "output": {
         ".html": {
-          "relative_path": "api/PlatONet.Node.html",
-          "hash": "g5TB84ELPEz3WVTViQYyJ8cU0Jw0w+W94gNNrTu8FR4="
+          "relative_path": "api/PlatONet.DTOs.TransactionResponse.html",
+          "hash": "r9MK1VgeLyJcYEHgcoSMELFjizgLq3A0+38kjlZstwM="
         }
       },
       "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PlatONet.DTOs.VoteOption.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PlatONet.DTOs.VoteOption.html",
+          "hash": "Tva9ErC3W5878vZppooHTvh8GdzbMJ3PGqzVmitAGJs="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PlatONet.DTOs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PlatONet.DTOs.html",
+          "hash": "dCqLkOT3jjA4geqIb5yGKmV/orwX7hcIThzEGbukaRE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PlatONet.HexBigInteger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PlatONet.HexBigInteger.html",
+          "hash": "FjdtSjp5HW+TzAuI57DvYpyO/H5FcUoIg8oRcJfZCSQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PlatONet.HexBigIntegerNumberExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PlatONet.HexBigIntegerNumberExtensions.html",
+          "hash": "90Yox0KVY3zrw6IB9fhZjdsgv8r1V2DsE6kfVhUj7Rk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PlatONet.HexByteConvertorExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PlatONet.HexByteConvertorExtensions.html",
+          "hash": "DUeSY2u36nL0fedUvljKR1ODuB0sq1X+QFWZZFXI0hY="
+        }
+      },
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -261,7 +441,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PlatONet.PPOS.html",
-          "hash": "4aYaJ3V7CWJckrTosNdHL7J47PZuEoge9q38wEy+lY8="
+          "hash": "ELF2CRUxZ29kwDv9iDUBNfViwFY5vAFSrasdZlLXg0o="
         }
       },
       "is_incremental": false,
@@ -273,22 +453,10 @@
       "output": {
         ".html": {
           "relative_path": "api/PlatONet.PPOSFunctionType.html",
-          "hash": "MTlKV0zT8+8kINJEAnFo4nYGYXOoE3RFyFWr80xHfW8="
+          "hash": "ggBxSvOWZtQVQyHFlQDH6Q9++AH1aukFW00PgeyLLoU="
         }
       },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/PlatONet.PPOSProposalType.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/PlatONet.PPOSProposalType.html",
-          "hash": "W9nyo9/Na7LaWvum+3hb+G4c4txTMI3zFOT1/bhhjt4="
-        }
-      },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -297,7 +465,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PlatONet.PlatON.html",
-          "hash": "MUuiFjFOgDNPtGfppjB16VL9BaGcAJsYS7eBQUnEGqc="
+          "hash": "k40sK0xE5wUrFwMH0t0sdcXWKyzl58NMde01US6axe0="
         }
       },
       "is_incremental": false,
@@ -309,22 +477,10 @@
       "output": {
         ".html": {
           "relative_path": "api/PlatONet.PlatONContract.html",
-          "hash": "0HnzyN1QYHTMCqFZGWCnBrKcpGX8TuiNkgBWkW/6fKc="
+          "hash": "QL0I8YRC2n9edCcjtOG1N0EXyphpMVlL/6nD3KfwLf0="
         }
       },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/PlatONet.PlatONException.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/PlatONet.PlatONException.html",
-          "hash": "57QTif6gBlJfyH58gMNkMLhqHxSlf2fnlUqb52f3fok="
-        }
-      },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -333,115 +489,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PlatONet.PlatONFunction.html",
-          "hash": "2smsmnNB4VZCu5cuOjX6q44IG67sMw3ox4Z/rd1syTI="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/PlatONet.ProgramVersion.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/PlatONet.ProgramVersion.html",
-          "hash": "ifvVb7i+1bRhZqFF3AVrNylcHdXzzobnU9qVmzaNYVk="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/PlatONet.Proposal.Builder.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/PlatONet.Proposal.Builder.html",
-          "hash": "Xj2DUpIySrjAd2LZqr8zPmpMpc7g+1QYtn3ZdqIS8ak="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/PlatONet.Proposal.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/PlatONet.Proposal.html",
-          "hash": "aPX7KLaODMNXPvj4p/EnxbfalaVajtYnnCZANL1ZSPo="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/PlatONet.RestrictingInfo.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/PlatONet.RestrictingInfo.html",
-          "hash": "KXSMb/K+aQS+g8oHJhP4dD6HN743bkxg7HFGzaDeWPU="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/PlatONet.RestrictingItem.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/PlatONet.RestrictingItem.html",
-          "hash": "AHNQtwrBm2OeMUiupsUJ6Jnh7lU5YgrFTb2fcZCB3I4="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/PlatONet.RestrictingPlan.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/PlatONet.RestrictingPlan.html",
-          "hash": "Q0fJxMwZXH/yPrcDjlcMrFxer0Wvw8VI8QnwNyRgj6I="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/PlatONet.RewardInfo.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/PlatONet.RewardInfo.html",
-          "hash": "IsOhbo5s8qDP+HnLRwpIJVS/51ejowqEY6GmpJPo9Vo="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/PlatONet.StakingAmountType.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/PlatONet.StakingAmountType.html",
-          "hash": "4bLWhf+tgC6FdblApNsR9cy74uzAnELQ6gDKgDyDoas="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/PlatONet.TallyResult.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/PlatONet.TallyResult.html",
-          "hash": "4rDz9y3ulf6QlSw6p+Pl8zrA1CAHZAocVn9VZKVb28o="
+          "hash": "o0UIIX2x2Sj4Jg4QWUCoRnTthbWjWR+jGDxqHoVr/E4="
         }
       },
       "is_incremental": false,
@@ -453,43 +501,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PlatONet.Transaction.html",
-          "hash": "eRXn65xjQLkjQP5ux1U3+UejOq3GBU7JOSHxZ++6+u0="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/PlatONet.TransactionReceipt.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/PlatONet.TransactionReceipt.html",
-          "hash": "W3TS+59pwwNVxH7BQ8+QiV2Lh9OvLrKVWhDPbH+zFyo="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/PlatONet.TransactionResponse.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/PlatONet.TransactionResponse.html",
-          "hash": "FYB3UZ153SezJsnG1NzWlWBDgeZ8d8Sz3Uq9xK3RZk0="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/PlatONet.VoteOption.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/PlatONet.VoteOption.html",
-          "hash": "PnPsyrmMZOowt8Y2xaqiUYSxk8I5ZWz8qRizVarS3GY="
+          "hash": "GSPzkBmGY0OOpzwJ0nVVVDShnNGWGmyvtY57k8vYfkQ="
         }
       },
       "is_incremental": false,
@@ -501,10 +513,10 @@
       "output": {
         ".html": {
           "relative_path": "api/PlatONet.WaitSlashingNode.html",
-          "hash": "yF80LIoky4dmPZlg2pV+y/6rUUTboBqP3blVWP2tXyY="
+          "hash": "1I6Cfyp1mmBaAbn2plh6tdKjhb5gr8xk5/0elFjcsdk="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -513,7 +525,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PlatONet.Web3.html",
-          "hash": "WjxRKJ7xuYqqKrBzihDB7cQ3R3a+mxXbHlzLG3YFoiw="
+          "hash": "YjiI0jwuDEJ2O8yHOosX41CUNf2/MewjJ9DoR9gW9/s="
         }
       },
       "is_incremental": false,
@@ -525,7 +537,7 @@
       "output": {
         ".html": {
           "relative_path": "api/PlatONet.html",
-          "hash": "MtpO5VIP1r/irI8U/PXc8mXfYwUFEas3YhtevmccYEE="
+          "hash": "IUpMGJwKHAuYoUdZ8TeRbThg0B7f3Z/5GG/PYTM8w1Y="
         }
       },
       "is_incremental": false,
@@ -537,10 +549,10 @@
       "output": {
         ".html": {
           "relative_path": "api/index.html",
-          "hash": "4pApJ+LWPrEQLS/Vb8rGEbgWzYytCrS6iZXDLzOyk4A="
+          "hash": "kN+1pR9kyYSLghyLMGe5Figplu2NZ0dpkJ8RivgQEbI="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -549,7 +561,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "rvFhOg0AaesLEtC3zGxBSTC0zLBW0ZLa+IsHTb063Vk="
+          "hash": "S5TSuUwzlA8q11A2eg055U7n6GILcfELA/ctXN2cg+4="
         }
       },
       "is_incremental": false,
@@ -561,10 +573,10 @@
       "output": {
         ".html": {
           "relative_path": "articles/basic.html",
-          "hash": "p+11OPd/K9e+0hUwk7BQv1qzpPlaoD++I2CgDWMJ4So="
+          "hash": "8oyZ785Jo2uVZzWmw5dzOYrOKAkwae8YYbgyvhvNdP8="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -573,10 +585,10 @@
       "output": {
         ".html": {
           "relative_path": "articles/contract.html",
-          "hash": "kPwHCxfgFM4k8RhWXXvkhC71sayH6R2n4A2WVxl70YI="
+          "hash": "eCbCd7n9gD93OWKLP464nYmu2Q4pDXBUgkgQ/rkG9to="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -585,10 +597,46 @@
       "output": {
         ".html": {
           "relative_path": "articles/intro.html",
-          "hash": "pL5s7WnAo9Rg7o9hVUFlbVSTMqKwYDrXWDdzVfTxMP0="
+          "hash": "WUa4hMQCwBpZjoOF1F/anVD9CC+HFrQ9osl6s4Tse54="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/ppos.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/ppos.html",
+          "hash": "6bO7fWoMygcMauwyLc3y0v7vTt5TW6QTTG0M6v/b1qc="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/query.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/query.html",
+          "hash": "p1XQBXPao/lV12Q3KYbO0CH4JXY+qqjQOKCmGGQzygw="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/start.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/start.html",
+          "hash": "F76/jyO0Cw0AukM2X6JjZ7f2wl+XC1o6a5OOogk6SE8="
+        }
+      },
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -597,10 +645,22 @@
       "output": {
         ".html": {
           "relative_path": "articles/toc.html",
-          "hash": "imOVtDbFYaGVLeA6cKMxtvsTs+OBs8b8EXD5g0TmUtA="
+          "hash": "T1OZjOnczY0hpCtlekSyeq/CNFyLf/aMZLLUk3IzVHg="
         }
       },
       "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/transfer.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/transfer.html",
+          "hash": "A7qFVn4hSILXhUqEEM7p4fMzIqqUyOt/0S5U07q+bFc="
+        }
+      },
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -609,10 +669,10 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "h1HH2LoK7avqdelf5CfT3LDqrF5GqL9wqkNWoL4zkIU="
+          "hash": "oDX1NK08M7w5itXCb6S0Osw8Z4tFeufvqUcrIZchwY0="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -621,7 +681,7 @@
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "XAWdY8TFCNLaPKNnW42vvuPsWXEbzWAkSe+bOfy8E/o="
+          "hash": "sLdHeIyz2stUFEaN5dZvVe9HUHzCMo0L+uQ3d0/wxQw="
         }
       },
       "is_incremental": false,
@@ -631,25 +691,23 @@
   "incremental_info": [
     {
       "status": {
-        "can_incremental": false,
-        "details": "Disable incremental build by force rebuild option.",
+        "can_incremental": true,
         "incrementalPhase": "build",
         "total_file_count": 0,
-        "skipped_file_count": 0,
-        "full_build_reason_code": "ForceRebuild"
+        "skipped_file_count": 0
       },
       "processors": {
         "ConceptualDocumentProcessor": {
-          "can_incremental": false,
+          "can_incremental": true,
           "incrementalPhase": "build",
-          "total_file_count": 5,
-          "skipped_file_count": 0
+          "total_file_count": 9,
+          "skipped_file_count": 9
         },
         "ManagedReferenceDocumentProcessor": {
-          "can_incremental": false,
+          "can_incremental": true,
           "incrementalPhase": "build",
-          "total_file_count": 44,
-          "skipped_file_count": 0
+          "total_file_count": 45,
+          "skipped_file_count": 41
         },
         "TocDocumentProcessor": {
           "can_incremental": false,
@@ -662,8 +720,8 @@
     },
     {
       "status": {
-        "can_incremental": false,
-        "details": "Cannot support incremental post processing, the reason is: it's disabled.",
+        "can_incremental": true,
+        "details": "Can support incremental post processing.",
         "incrementalPhase": "postProcessing",
         "total_file_count": 0,
         "skipped_file_count": 0

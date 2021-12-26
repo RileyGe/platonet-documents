@@ -73,7 +73,8 @@
   
   <h1 id="PlatONet_Transaction" data-uid="PlatONet.Transaction" class="text-break">Class Transaction
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>交易信息</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -114,14 +115,15 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/RileyGe/PlatONet/new/main/apiSpec/new?filename=PlatONet_Transaction__ctor_System_String_Nethereum_Hex_HexTypes_HexBigInteger_Nethereum_Hex_HexTypes_HexBigInteger_Nethereum_Hex_HexTypes_HexBigInteger_Nethereum_Hex_HexTypes_HexBigInteger_System_String_Nethereum_Hex_HexTypes_HexBigInteger_.md&amp;value=---%0Auid%3A%20PlatONet.Transaction.%23ctor(System.String%2CNethereum.Hex.HexTypes.HexBigInteger%2CNethereum.Hex.HexTypes.HexBigInteger%2CNethereum.Hex.HexTypes.HexBigInteger%2CNethereum.Hex.HexTypes.HexBigInteger%2CSystem.String%2CNethereum.Hex.HexTypes.HexBigInteger)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/RileyGe/PlatONet/new/main/apiSpec/new?filename=PlatONet_Transaction__ctor_System_String_PlatONet_HexBigInteger_PlatONet_HexBigInteger_PlatONet_HexBigInteger_PlatONet_HexBigInteger_System_String_PlatONet_HexBigInteger_.md&amp;value=---%0Auid%3A%20PlatONet.Transaction.%23ctor(System.String%2CPlatONet.HexBigInteger%2CPlatONet.HexBigInteger%2CPlatONet.HexBigInteger%2CPlatONet.HexBigInteger%2CSystem.String%2CPlatONet.HexBigInteger)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/RileyGe/PlatONet/blob/main/PlatONet/Transaction.cs/#L197">View Source</a>
+    <a href="https://github.com/RileyGe/PlatONet/blob/main/PlatONet/Transaction.cs/#L222">View Source</a>
   </span>
   <a id="PlatONet_Transaction__ctor_" data-uid="PlatONet.Transaction.#ctor*"></a>
-  <h4 id="PlatONet_Transaction__ctor_System_String_Nethereum_Hex_HexTypes_HexBigInteger_Nethereum_Hex_HexTypes_HexBigInteger_Nethereum_Hex_HexTypes_HexBigInteger_Nethereum_Hex_HexTypes_HexBigInteger_System_String_Nethereum_Hex_HexTypes_HexBigInteger_" data-uid="PlatONet.Transaction.#ctor(System.String,Nethereum.Hex.HexTypes.HexBigInteger,Nethereum.Hex.HexTypes.HexBigInteger,Nethereum.Hex.HexTypes.HexBigInteger,Nethereum.Hex.HexTypes.HexBigInteger,System.String,Nethereum.Hex.HexTypes.HexBigInteger)">Transaction(String, HexBigInteger, HexBigInteger, HexBigInteger, HexBigInteger, String, HexBigInteger)</h4>
-  <div class="markdown level1 summary"></div>
+  <h4 id="PlatONet_Transaction__ctor_System_String_PlatONet_HexBigInteger_PlatONet_HexBigInteger_PlatONet_HexBigInteger_PlatONet_HexBigInteger_System_String_PlatONet_HexBigInteger_" data-uid="PlatONet.Transaction.#ctor(System.String,PlatONet.HexBigInteger,PlatONet.HexBigInteger,PlatONet.HexBigInteger,PlatONet.HexBigInteger,System.String,PlatONet.HexBigInteger)">Transaction(String, HexBigInteger, HexBigInteger, HexBigInteger, HexBigInteger, String, HexBigInteger)</h4>
+  <div class="markdown level1 summary"><p>初始化交易</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -140,37 +142,44 @@
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">to</span></td>
-        <td></td>
+        <td><p>交易发送到的地址</p>
+</td>
       </tr>
       <tr>
-        <td><span class="xref">Nethereum.Hex.HexTypes.HexBigInteger</span></td>
+        <td><a class="xref" href="PlatONet.HexBigInteger.html">HexBigInteger</a></td>
         <td><span class="parametername">amount</span></td>
-        <td></td>
+        <td><p>交易中包含的lat数量（单位VON）</p>
+</td>
       </tr>
       <tr>
-        <td><span class="xref">Nethereum.Hex.HexTypes.HexBigInteger</span></td>
+        <td><a class="xref" href="PlatONet.HexBigInteger.html">HexBigInteger</a></td>
         <td><span class="parametername">nonce</span></td>
-        <td></td>
+        <td><p>交易的索引</p>
+</td>
       </tr>
       <tr>
-        <td><span class="xref">Nethereum.Hex.HexTypes.HexBigInteger</span></td>
+        <td><a class="xref" href="PlatONet.HexBigInteger.html">HexBigInteger</a></td>
         <td><span class="parametername">gasPrice</span></td>
-        <td></td>
+        <td><p>交易的汽油价格</p>
+</td>
       </tr>
       <tr>
-        <td><span class="xref">Nethereum.Hex.HexTypes.HexBigInteger</span></td>
+        <td><a class="xref" href="PlatONet.HexBigInteger.html">HexBigInteger</a></td>
         <td><span class="parametername">gasLimit</span></td>
-        <td></td>
+        <td><p>交易最多花费的汽油数量上限</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">data</span></td>
-        <td></td>
+        <td><p>交易包含的数据</p>
+</td>
       </tr>
       <tr>
-        <td><span class="xref">Nethereum.Hex.HexTypes.HexBigInteger</span></td>
+        <td><a class="xref" href="PlatONet.HexBigInteger.html">HexBigInteger</a></td>
         <td><span class="parametername">chainId</span></td>
-        <td></td>
+        <td><p>交易的链ID</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -181,11 +190,12 @@
     <a href="https://github.com/RileyGe/PlatONet/new/main/apiSpec/new?filename=PlatONet_Transaction_Amount.md&amp;value=---%0Auid%3A%20PlatONet.Transaction.Amount%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/RileyGe/PlatONet/blob/main/PlatONet/Transaction.cs/#L37">View Source</a>
+    <a href="https://github.com/RileyGe/PlatONet/blob/main/PlatONet/Transaction.cs/#L43">View Source</a>
   </span>
   <a id="PlatONet_Transaction_Amount_" data-uid="PlatONet.Transaction.Amount*"></a>
   <h4 id="PlatONet_Transaction_Amount" data-uid="PlatONet.Transaction.Amount">Amount</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>交易中包含的lat数量（单位VON）</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -201,7 +211,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Nethereum.Hex.HexTypes.HexBigInteger</span></td>
+        <td><a class="xref" href="PlatONet.HexBigInteger.html">HexBigInteger</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -211,11 +221,12 @@
     <a href="https://github.com/RileyGe/PlatONet/new/main/apiSpec/new?filename=PlatONet_Transaction_ChainId.md&amp;value=---%0Auid%3A%20PlatONet.Transaction.ChainId%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/RileyGe/PlatONet/blob/main/PlatONet/Transaction.cs/#L152">View Source</a>
+    <a href="https://github.com/RileyGe/PlatONet/blob/main/PlatONet/Transaction.cs/#L173">View Source</a>
   </span>
   <a id="PlatONet_Transaction_ChainId_" data-uid="PlatONet.Transaction.ChainId*"></a>
   <h4 id="PlatONet_Transaction_ChainId" data-uid="PlatONet.Transaction.ChainId">ChainId</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>交易的链ID</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -231,7 +242,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Nethereum.Hex.HexTypes.HexBigInteger</span></td>
+        <td><a class="xref" href="PlatONet.HexBigInteger.html">HexBigInteger</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -241,11 +252,12 @@
     <a href="https://github.com/RileyGe/PlatONet/new/main/apiSpec/new?filename=PlatONet_Transaction_Data.md&amp;value=---%0Auid%3A%20PlatONet.Transaction.Data%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/RileyGe/PlatONet/blob/main/PlatONet/Transaction.cs/#L129">View Source</a>
+    <a href="https://github.com/RileyGe/PlatONet/blob/main/PlatONet/Transaction.cs/#L147">View Source</a>
   </span>
   <a id="PlatONet_Transaction_Data_" data-uid="PlatONet.Transaction.Data*"></a>
   <h4 id="PlatONet_Transaction_Data" data-uid="PlatONet.Transaction.Data">Data</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>交易包含的数据</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -271,11 +283,12 @@
     <a href="https://github.com/RileyGe/PlatONet/new/main/apiSpec/new?filename=PlatONet_Transaction_GasLimit.md&amp;value=---%0Auid%3A%20PlatONet.Transaction.GasLimit%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/RileyGe/PlatONet/blob/main/PlatONet/Transaction.cs/#L105">View Source</a>
+    <a href="https://github.com/RileyGe/PlatONet/blob/main/PlatONet/Transaction.cs/#L120">View Source</a>
   </span>
   <a id="PlatONet_Transaction_GasLimit_" data-uid="PlatONet.Transaction.GasLimit*"></a>
   <h4 id="PlatONet_Transaction_GasLimit" data-uid="PlatONet.Transaction.GasLimit">GasLimit</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>交易最多花费的汽油数量上限</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -291,7 +304,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Nethereum.Hex.HexTypes.HexBigInteger</span></td>
+        <td><a class="xref" href="PlatONet.HexBigInteger.html">HexBigInteger</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -301,11 +314,12 @@
     <a href="https://github.com/RileyGe/PlatONet/new/main/apiSpec/new?filename=PlatONet_Transaction_GasPrice.md&amp;value=---%0Auid%3A%20PlatONet.Transaction.GasPrice%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/RileyGe/PlatONet/blob/main/PlatONet/Transaction.cs/#L81">View Source</a>
+    <a href="https://github.com/RileyGe/PlatONet/blob/main/PlatONet/Transaction.cs/#L93">View Source</a>
   </span>
   <a id="PlatONet_Transaction_GasPrice_" data-uid="PlatONet.Transaction.GasPrice*"></a>
   <h4 id="PlatONet_Transaction_GasPrice" data-uid="PlatONet.Transaction.GasPrice">GasPrice</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>交易的汽油价格</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -321,7 +335,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Nethereum.Hex.HexTypes.HexBigInteger</span></td>
+        <td><a class="xref" href="PlatONet.HexBigInteger.html">HexBigInteger</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -331,11 +345,12 @@
     <a href="https://github.com/RileyGe/PlatONet/new/main/apiSpec/new?filename=PlatONet_Transaction_Nonce.md&amp;value=---%0Auid%3A%20PlatONet.Transaction.Nonce%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/RileyGe/PlatONet/blob/main/PlatONet/Transaction.cs/#L59">View Source</a>
+    <a href="https://github.com/RileyGe/PlatONet/blob/main/PlatONet/Transaction.cs/#L68">View Source</a>
   </span>
   <a id="PlatONet_Transaction_Nonce_" data-uid="PlatONet.Transaction.Nonce*"></a>
   <h4 id="PlatONet_Transaction_Nonce" data-uid="PlatONet.Transaction.Nonce">Nonce</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>交易的索引</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -351,7 +366,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Nethereum.Hex.HexTypes.HexBigInteger</span></td>
+        <td><a class="xref" href="PlatONet.HexBigInteger.html">HexBigInteger</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -361,11 +376,12 @@
     <a href="https://github.com/RileyGe/PlatONet/new/main/apiSpec/new?filename=PlatONet_Transaction_SignedTransaction.md&amp;value=---%0Auid%3A%20PlatONet.Transaction.SignedTransaction%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/RileyGe/PlatONet/blob/main/PlatONet/Transaction.cs/#L177">View Source</a>
+    <a href="https://github.com/RileyGe/PlatONet/blob/main/PlatONet/Transaction.cs/#L201">View Source</a>
   </span>
   <a id="PlatONet_Transaction_SignedTransaction_" data-uid="PlatONet.Transaction.SignedTransaction*"></a>
   <h4 id="PlatONet_Transaction_SignedTransaction" data-uid="PlatONet.Transaction.SignedTransaction">SignedTransaction</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>签名后的交易</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -391,11 +407,12 @@
     <a href="https://github.com/RileyGe/PlatONet/new/main/apiSpec/new?filename=PlatONet_Transaction_To.md&amp;value=---%0Auid%3A%20PlatONet.Transaction.To%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/RileyGe/PlatONet/blob/main/PlatONet/Transaction.cs/#L15">View Source</a>
+    <a href="https://github.com/RileyGe/PlatONet/blob/main/PlatONet/Transaction.cs/#L18">View Source</a>
   </span>
   <a id="PlatONet_Transaction_To_" data-uid="PlatONet.Transaction.To*"></a>
   <h4 id="PlatONet_Transaction_To" data-uid="PlatONet.Transaction.To">To</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>交易发送到的地址</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -420,61 +437,15 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/RileyGe/PlatONet/new/main/apiSpec/new?filename=PlatONet_Transaction_Sign_Nethereum_Signer_EthECKey_.md&amp;value=---%0Auid%3A%20PlatONet.Transaction.Sign(Nethereum.Signer.EthECKey)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/RileyGe/PlatONet/blob/main/PlatONet/Transaction.cs/#L210">View Source</a>
-  </span>
-  <a id="PlatONet_Transaction_Sign_" data-uid="PlatONet.Transaction.Sign*"></a>
-  <h4 id="PlatONet_Transaction_Sign_Nethereum_Signer_EthECKey_" data-uid="PlatONet.Transaction.Sign(Nethereum.Signer.EthECKey)">Sign(EthECKey)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public EthECDSASignature Sign(EthECKey key)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Nethereum.Signer.EthECKey</span></td>
-        <td><span class="parametername">key</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Nethereum.Signer.EthECDSASignature</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
     <a href="https://github.com/RileyGe/PlatONet/new/main/apiSpec/new?filename=PlatONet_Transaction_Sign_PlatONet_Account_.md&amp;value=---%0Auid%3A%20PlatONet.Transaction.Sign(PlatONet.Account)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/RileyGe/PlatONet/blob/main/PlatONet/Transaction.cs/#L220">View Source</a>
+    <a href="https://github.com/RileyGe/PlatONet/blob/main/PlatONet/Transaction.cs/#L250">View Source</a>
   </span>
   <a id="PlatONet_Transaction_Sign_" data-uid="PlatONet.Transaction.Sign*"></a>
   <h4 id="PlatONet_Transaction_Sign_PlatONet_Account_" data-uid="PlatONet.Transaction.Sign(PlatONet.Account)">Sign(Account)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>对交易进行签名</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -493,7 +464,8 @@
       <tr>
         <td><a class="xref" href="PlatONet.Account.html">Account</a></td>
         <td><span class="parametername">account</span></td>
-        <td></td>
+        <td><p>签名使用的<a class="xref" href="PlatONet.Account.html">Account</a></p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -508,37 +480,8 @@
     <tbody>
       <tr>
         <td><span class="xref">Nethereum.Signer.EthECDSASignature</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/RileyGe/PlatONet/new/main/apiSpec/new?filename=PlatONet_Transaction_ToDict.md&amp;value=---%0Auid%3A%20PlatONet.Transaction.ToDict%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/RileyGe/PlatONet/blob/main/PlatONet/Transaction.cs/#L239">View Source</a>
-  </span>
-  <a id="PlatONet_Transaction_ToDict_" data-uid="PlatONet.Transaction.ToDict*"></a>
-  <h4 id="PlatONet_Transaction_ToDict" data-uid="PlatONet.Transaction.ToDict">ToDict()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Dictionary&lt;string, string&gt; ToDict()</code></pre>
-  </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Collections.Generic.Dictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
-        <td></td>
+        <td><p>签名后的交易信息</p>
+</td>
       </tr>
     </tbody>
   </table>
